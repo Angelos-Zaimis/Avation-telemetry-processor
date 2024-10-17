@@ -1,0 +1,49 @@
+# Binaries for programs and scripts
+/target/
+
+# If you have the `Cargo.lock` file in your root, it will be generated if you build the project.
+Cargo.lock
+
+# Ignore generated documentation
+/target/doc/
+
+# Build artifacts
+**/*.rs.bk
+
+# Incremental compilation files, removed if they exist
+/target/debug/incremental/
+/target/release/incremental/
+
+# Output of the `cargo test` command
+/test-results/
+
+# Output of the `cargo bench` command
+/target/criterion/
+
+# Dependencies for packages built with `cargo vendor`
+/vendor/
+
+# If using `rustup` toolchains
+rust-toolchain
+
+# The .idea/ folder stores project settings if using IntelliJ or other JetBrains IDEs
+.idea/
+
+# VS Code settings
+.vscode/
+*.code-workspace
+
+# Cargo specific files
+.cargo/
+.cargo/config.toml
+
+# Mac-specific files
+.DS_Store
+
+# Ignore temporary files created by various editors
+*.swp
+*.swo
+*~
+
+# Ignore build artifacts and caches
+/target/
