@@ -3,8 +3,10 @@ name = "AvaitonTelemetryProcessor"
 version = "0.1.0"
 edition = "2021"
 
+
 [dependencies]
 tokio = { version = "1", features = ["full"] }
+tokio-postgres = "0.7.12"
 nom = "7"
-tokio-postgres = "0.7"
+chrono = "0.4"
 flyway = "0.3.1"
