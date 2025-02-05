@@ -1,0 +1,25 @@
+thread 'main' panicked at compiler/rustc_session/src/config.rs:1189:74:
+called `Result::unwrap()` on an `Err` value: Os { code: 1, kind: PermissionDenied, message: "Operation not permitted" }
+stack backtrace:
+   0:        0x1104a6abc - std::backtrace::Backtrace::create::hdd6ae3ec02ef30a2
+   1:        0x10e30776c - <alloc[ac3a40a93536e1d0]::boxed::Box<rustc_driver_impl[2efa7699d230cd08]::install_ice_hook::{closure#0}> as core[e750fbdca16b7814]::ops::function::Fn<(&dyn for<'a, 'b> core[e750fbdca16b7814]::ops::function::Fn<(&'a std[5e488047b44b26af]::panic::PanicHookInfo<'b>,), Output = ()> + core[e750fbdca16b7814]::marker::Sync + core[e750fbdca16b7814]::marker::Send, &std[5e488047b44b26af]::panic::PanicHookInfo)>>::call
+   2:        0x1104c1200 - std::panicking::rust_panic_with_hook::h9a5dc30b684e2ff4
+   3:        0x1104c0e3c - std::panicking::begin_panic_handler::{{closure}}::hbcb5de8b840ae91c
+   4:        0x1104bea40 - std::sys::backtrace::__rust_end_short_backtrace::ha657d4b4d65dc993
+   5:        0x1104c0b00 - _rust_begin_unwind
+   6:        0x112ba3b2c - core::panicking::panic_fmt::hda207213c7ca0065
+   7:        0x112ba3f1c - core::result::unwrap_failed::h8075069206468d45
+   8:        0x10fe32c6c - <rustc_session[57d16b23e567c0ef]::options::Options as core[e750fbdca16b7814]::default::Default>::default
+   9:        0x10e2bee64 - rustc_driver_impl[2efa7699d230cd08]::version_at_macro_invocation
+  10:        0x10e2c2c78 - rustc_driver_impl[2efa7699d230cd08]::handle_options
+  11:        0x10e2b9540 - rustc_driver_impl[2efa7699d230cd08]::run_compiler
+  12:        0x10e2c49c4 - rustc_driver_impl[2efa7699d230cd08]::main
+  13:        0x10277cdf4 - rustc_main[d17d7e177e3e1927]::main
+  14:        0x10277cda8 - std[5e488047b44b26af]::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15:        0x10277cdc0 - std[5e488047b44b26af]::rt::lang_start::<()>::{closure#0}
+  16:        0x1104a49e8 - std::rt::lang_start_internal::hf1bc3d9041088441
+  17:        0x10277ce28 - _main
+
+
+rustc version: 1.84.1 (e71f9a9a9 2025-01-27)
+platform: aarch64-apple-darwin
